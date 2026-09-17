@@ -1,5 +1,7 @@
 import "./Home.css"
+import Btn from "../common/Btn";
 import React from 'react'
+import { product } from "../../data/Product";
 
 
 export default function Home() {
@@ -34,28 +36,31 @@ export default function Home() {
     <section>
       <h1>My first component {a + b}</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci minima, placeat itaque temporibus atque soluta exercitationem aut porro nemo ipsum! Architecto autem ea animi voluptatem recusandae nostrum. Vitae, exercitationem cupiditate!</p>
-    </section>
+    <Btn value = {"read more"} color = "blue"/>
+     </section>
     <section className="productSection">
         <h2>Our Product</h2>
         <div className="productMid">
-          <Product/>
-          <Product/>
-          <Product/>
-          <Product/>
-          <Product/>
-          <Product/>
-          <Product/>
-          <Product/>
+          {
+            product.map((obj, index)=><Product props = {obj}/>)
+          }
+          
         </div>
     </section>
     </>
   )
 }
-function Product(){
+function Product({props}){
   return(
     <div className="productItem">
-            <img src="/40.jpg" alt="" />
-            <h3>Clock Tower</h3>
+      <h1>{props.id}</h1>
+            <img src={props.thumbnail} alt="" />
+            <h3>{props.title}</h3>
+            <p>{props.description}</p>
+            <h4>{props.price}</h4>
+            <h5>{props.category}</h5>
+            <h6>{props.rating}</h6>
+            <Btn value = {"Read detail"} color = "green"/>
           </div>
   )
 }

@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import Header from "./components/common/header";
-import Home from "./components/common/pages/home";
+import Home from "./components/pages/home";
 import Footer from "./components/common/Footer";
 import "./index.css"
 
