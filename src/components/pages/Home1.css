@@ -1,0 +1,40 @@
+.faqs{
+    padding-block: 40px;
+    background-color: antiquewhite;
+}
+.faqs h1{
+    text-align: center;
+}
+.div{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+}
+.border{
+    border: 1px solid;
+    margin-top: 12px;
+}
+.book{
+    background-color: blue;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+.border h3 span{
+    position: absolute;
+    right: 12px;
+}
+.border p {
+    padding: 12px;
+}
+
+.answer {
+    display: block;
+}
+
+.answer-hidden {
+    display: none;
+}
