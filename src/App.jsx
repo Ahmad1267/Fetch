@@ -4,15 +4,18 @@ import Product from "./components/pages/Product";
 import Home1 from "./components/pages/Home1";
 import About from "./components/pages/About";
 import { HiH1 } from "react-icons/hi2";
+import RootLayout from "./components/common/Rootlayout";
 
 export default function App() {
   return (
 <>
 <BrowserRouter>
 <Routes>
+    <Route element={<RootLayout/>}>
     <Route path="/" element={<Home1/>}/>
     <Route path="/about" element={<About/>}/>
     <Route path="/product" element={<Product/>}/>
+    </Route>
 </Routes>
 </BrowserRouter>
 </>

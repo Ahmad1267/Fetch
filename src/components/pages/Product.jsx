@@ -8,7 +8,6 @@ import products from '../../data/ProData'
 export default function Product() {
   return (
     <div>
-      <Header1/>
     <section className="products-section">
       <div className="container">
 
@@ -104,7 +103,6 @@ export default function Product() {
 
       </div>
     </section>
-      <Footer1/>
     </div>
   )
 }

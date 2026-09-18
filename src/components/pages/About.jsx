@@ -5,7 +5,6 @@ import Footer1 from '../common/Footer1'
 export default function About() {
   return (
     <div>
-      <Header1/>
       <section className="home-section">
                 <div className="home-container">
 
@@ -46,7 +45,6 @@ export default function About() {
 
                 </div>
             </section>
-            <Footer1/>
     </div>
   )
 }

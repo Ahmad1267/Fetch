@@ -11,7 +11,6 @@ export default function Home1() {
     let [openAns, set] = useState(0)
     return (
         <>
-            <Header1 />
             
             <section className='faqs'>
                 <h1>FAQs About {openAns}</h1>
@@ -34,7 +33,6 @@ export default function Home1() {
                     }
                 </div>
             </section>
-            <Footer1 />
         </>
     )
 }
