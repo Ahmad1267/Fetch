@@ -64,6 +64,11 @@ export default function Header1() {
                                     Products
                                 </Link>
                             </li>
+                            <li>
+                                <Link to={"/login"} className="nav-link">
+                                    Login
+                                </Link>
+                            </li>
 
 
                         </ul>

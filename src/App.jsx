@@ -5,6 +5,7 @@ import Home1 from "./components/pages/Home1";
 import About from "./components/pages/About";
 import { HiH1 } from "react-icons/hi2";
 import RootLayout from "./components/common/Rootlayout";
+import Login from "./components/pages/Login";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
     <Route path="/about" element={<About/>}/>
     <Route path="/product" element={<Product/>}/>
     </Route>
+    <Route path="login" element={<Login/>}/>
 </Routes>
 </BrowserRouter>
 </>
