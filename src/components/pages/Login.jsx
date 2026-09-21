@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router'
 import "./Login.css"
 import { useNavigate } from 'react-router';
 export default function Login() {
-      const navigate = useNavigate();
+      const navigate = useNavigate()
 
   return (
     <div className="login-page">
@@ -29,17 +29,26 @@ export default function Login() {
 
           <form>
 
+            {/* Name */}
+            <div className="form-group">
+              <label htmlFor="email">Name</label>
+              <input
+                type="name"
+                id="name"
+                placeholder="Enter your name"
+              />
+            </div>
+
             {/* Email */}
             <div className="form-group">
-              <label htmlFor="email">Email Address</label>
+              <label htmlFor="password">Email</label>
               <input
                 type="email"
                 id="email"
                 placeholder="Enter your email"
               />
             </div>
-
-            {/* Password */}
+               {/* Password */}
             <div className="form-group">
               <label htmlFor="password">Password</label>
               <input
@@ -64,7 +73,7 @@ export default function Login() {
             </div>
 
             {/* Login Button */}
-            <button type="submit" className="login-btn">
+            <button className="login-btn">
               Login
             </button>
 
@@ -73,7 +82,7 @@ export default function Login() {
           {/* Register */}
           <p className="register">
             Don't have an account?
-            <a href="#"> Create Account</a>
+            <a href='#'>Create Account</a>
           </p>
         </div>
 <Link to="/">

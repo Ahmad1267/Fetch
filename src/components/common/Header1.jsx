@@ -65,6 +65,11 @@ export default function Header1() {
                                 </Link>
                             </li>
                             <li>
+                                <Link to={"/proApi"} className="nav-link">
+                                    ProApi
+                                </Link>
+                            </li>
+                            <li>
                                 <Link to={"/login"} className="nav-link">
                                     Login
                                 </Link>
