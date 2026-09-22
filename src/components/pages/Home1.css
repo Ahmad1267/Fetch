@@ -228,6 +228,7 @@
 .faqs{
     padding-block: 40px;
     background-color: antiquewhite;
+    display: block;
 }
 .faqs h1{
     text-align: center;
@@ -241,6 +242,8 @@
 .border{
     border: 1px solid;
     margin-top: 12px;
+      width: 100%;
+    display: block;
 }
 .book{
     background-color: blue;

@@ -21,8 +21,8 @@ color: #0f172a;      /* text-slate-900 */
 .arti{
   border: 1px solid;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
 }
 .card{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);

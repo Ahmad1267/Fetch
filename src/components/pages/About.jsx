@@ -1,6 +1,7 @@
 import React from 'react'
 import Header1 from '../common/Header1'
 import Footer1 from '../common/Footer1'
+import "./About.css"
 
 export default function About() {
   return (
@@ -10,33 +11,33 @@ export default function About() {
 
                     <h1 className="home-title">About Us</h1>
 
-                    <p>
+                    <p className='p'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nisi quisquam dignissimos sunt aliquam nostrum, similique illo
                         quas exercitationem rerum, quia cumque possimus. Fugit, alias
                         omnis.
                     </p>
 
-                    <p>
+                    <p className='p'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nisi quisquam dignissimos sunt aliquam nostrum, similique illo
                         quas exercitationem rerum, quia cumque possimus. Fugit, alias
                         omnis.
                     </p>
 
-                    <p>
+                    <p className='p'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nisi quisquam dignissimos sunt aliquam nostrum, similique illo
                         quas exercitationem rerum, quia cumque possimus. Fugit, alias
                         omnis.
                     </p>
-                    <p>
+                    <p className='p'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nisi quisquam dignissimos sunt aliquam nostrum, similique illo
                         quas exercitationem rerum, quia cumque possimus. Fugit, alias
                         omnis.
                     </p>
-                    <p>
+                    <p className='p'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Nisi quisquam dignissimos sunt aliquam nostrum, similique illo
                         quas exercitationem rerum, quia cumque possimus. Fugit, alias

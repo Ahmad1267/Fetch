@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import axios from 'axios'
+import "./ProDetApi.css"
 
 export default function ProDetApi() {
     let [data, setData] = useState(null)
@@ -17,19 +18,17 @@ export default function ProDetApi() {
         }
     },[pid])
   return (
-    <div>
+    <div className='page'>
           {
             data &&
-            <div>
+            <div className='title'>
                 <h1>{data.title}</h1>
-                <div>
-                    <figure>
+                <div className='Card'>
+                    <figure className='box'>
                         <img src={data.thumbnail} alt="" />
                     </figure>
-                    <article>
-                        <h3>{data.description}</h3>
-                    </article>
-                    <h5>${data.price}</h5>
+                        <p className='descrip'>{data.description}</p>
+                    <h5 className='price'>${data.price}</h5>
                 </div>
             </div>
           }
