@@ -45,16 +45,15 @@ const deleteComplete = (index) => {
       {todo.map((todo,index)=>(
         <div className='todo' key={index}>
         <span>{todo}</span>
-         <button onClick={()=>completeTodo(index)}>Complete</button>
-      <button onClick={()=>delTodo(index)}>Del</button>
-      
+      <button onClick={()=>completeTodo(index)}>Complete</button>
+      <button onClick={()=>delTodo(index)}>Delete</button>
       </div>
       ))}    
-       <h2>Comp</h2>
+       <h2>Complete</h2>
       {complete.map((todo, index)=>(
         <div className='completed'  key={index}>
           <span>{todo}</span>
-          <button onClick={()=>deleteComplete(index)}>del</button>
+          <button onClick={()=>deleteComplete(index)}>Delete</button>
    </div>
    ))}
     </div>
