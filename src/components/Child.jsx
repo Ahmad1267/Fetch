@@ -33,6 +33,7 @@ if(edit !== null){
 setInput("")
 }
 const completeTodo = (index)=>{
+    if (edit !== null) return;
   setComplete([...complete, todo[index]]);
   delTodo(index);
 }
@@ -44,6 +45,7 @@ const editTodo = (index)=>{
 //   setTodo(todo.filter((_, i)=> i !== index))
 // }  
  const delTodo = (index)=>{
+    if (edit !== null) return;
         const newtodo = todo.filter((_,i)=>{
             return i !== index;
         })
@@ -55,6 +57,7 @@ const editComplete = (index)=>{
   
 }
 const deleteComplete = (index) => {
+    if (edit !== null) return;
   const newComplete = complete.filter((_, i) => {
     return i !== index;
   });
