@@ -15,12 +15,13 @@ function App() {
   useEffect(() => {
     getCompany()
   }, [])
+  console.log(data,"data")
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-5">
       <h1 className="text-center text-4xl font-bold text-gray-800">Fetch Data</h1>
-      <div className="w-full flex flex-wrap justify-center gap-6">
+      <div className="w-full flex flex-wrap justify-center gap-6 mt-7">
         {
-          data.map((obj, index) => <Card data={obj} key={index} />)
+          data.map((obj, index) => <Card data={obj} key={index} />) 
         }
       </div>
     </div>
@@ -31,61 +32,45 @@ export default App
 
 function Card({ data }) {
   return (
-    <div className="w-[350px] bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 text-center">
+    <div className="w-[350px] bg-white rounded-2xl  hover:shadow-xl transition duration-300">
 
+            <span className="w-[130px] text-left text-sm text-gray-700 ml-3 ml-66 ">
+              {data.stock} available
+            </span>
       {/* Image */}
-      <div className="w-full h-[320px] flex items-center justify-center overflow-hidden">
         <img
           src={data.thumbnail}
           alt={data.title}
-          className="w-full h-full object-contain hover:scale-105 transition duration-500"
+          className="hover:scale-105 transition-transform duration-500"
         />
-      </div>
-
-      {/* Content */}
-      <div className="px-5 pb-4">
+        {/* Content */}
+      <div className="px-5 pb-1">
 
         {/* Title */}
-        <h1 className="text-xl font-bold text-gray-800 mb-4 leading-tight">
+        <h1 className="min-h-[50px] text-xl font-bold text-gray-800 mb-4 leading-tight ml-3">
           {data.title}
         </h1>
+        <h3 className="mt-auto  font-[Montserrat] text-sm font-semibold text-gray-800 ml-3 mb-2">{data.brand}</h3>
 
         {/* Product Details */}
         <div className="flex flex-col gap-2">
+            <p className="line-clamp-1 ml-3 font-[Inter] text-sm text-gray-600 truncate text-m">{data.description}</p>
 
-          {/* Type */}
-          <div className="flex items-center justify-center">
-            <span className="w-[55px] text-left text-sm font-semibold text-gray-500">
-              Type
-            </span>
-
-            <span className="w-[130px] text-left text-sm text-gray-700 capitalize">
+            <span className="w-[130px] text-left text-sm text-gray-700 capitalize ml-3">
               {data.category}
             </span>
-          </div>
-
-          {/* Stock */}
-          <div className="flex items-center justify-center">
-            <span className="w-[55px] text-left text-sm font-semibold text-gray-500">
-              Stock
-            </span>
-
-            <span className="w-[130px] text-left text-sm text-gray-700">
-              {data.stock} available
-            </span>
-          </div>
-
+               
           {/* Price */}
-          <div className="mt-1 pt-2 border-t border-gray-200 flex items-center justify-center">
-            <span className="w-[55px] text-left text-sm font-semibold text-gray-500">
+          
+          <div className="mt-1 pt-2 border-t border-gray-200 flex items-center justify-between px-3">
+            <span className=" font-semibold text-gray-500  text-m">
               Price
             </span>
-
-            <span className="w-[130px] text-left text-2xl font-bold text-green-600">
+            <span className=" text-m text-gray-500 mr-auto  ">
               ${data.price}
             </span>
+             <button className="bg-black text-white py-2 px-5 rounded-lg font-semibold text-sm hover:bg-gray-800 transition duration-300" >Buy Now</button>
           </div>
-
         </div>
       </div>
     </div>
